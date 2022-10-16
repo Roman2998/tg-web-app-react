@@ -1,6 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './Form.css';
 import {useTelegram} from "../../hooks/useTelegram";
+import {Link} from "react-router-dom";
 
 const Form = () => {
     const [country, setCountry] = useState('');
@@ -9,12 +10,13 @@ const Form = () => {
     const {tg} = useTelegram();
 
     const onSendData = useCallback(() => {
-        const data = {
-            country,
-            street,
-            subject
-        }
-        tg.sendData(JSON.stringify(data));
+        // const data = {
+        //     country,
+        //     street,
+        //     subject
+        // }
+        // tg.sendData(JSON.stringify(data));
+        tg.openLink(<Link to='product'/>)
     }, [country, street, subject])
 
     useEffect(() => {

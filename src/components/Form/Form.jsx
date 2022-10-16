@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './Form.css';
 import {useTelegram} from "../../hooks/useTelegram";
-import {Redirect} from "react-router-dom";
+import {Navigate} from "react-router-dom";
 
 const Form = () => {
     const [country, setCountry] = useState('');
@@ -23,7 +23,7 @@ const Form = () => {
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
         tg.onEvent('mainButtonClicked', () => {
-            return <Redirect to='product'/>
+            return <Navigate to='product'/>
         })
 
         return () => {

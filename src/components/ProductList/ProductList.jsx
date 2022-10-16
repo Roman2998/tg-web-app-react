@@ -32,7 +32,7 @@ const ProductList = () => {
             queryId,
             user
         }
-        fetch('https://2d8ea9c8fd7977.lhr.life//web-data', {
+        fetch('https://2d8ea9c8fd7977.lhr.life/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './Form.css';
 import {useTelegram} from "../../hooks/useTelegram";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const Form = () => {
     const [country, setCountry] = useState('');
@@ -16,7 +16,9 @@ const Form = () => {
         //     subject
         // }
         // tg.sendData(JSON.stringify(data));
-        tg.openLink(<Link to='product'/>)
+        // tg.openLink(<Link to='product'/>)
+        <NavLink to='product'></NavLink>
+
     }, [country, street, subject])
 
     useEffect(() => {

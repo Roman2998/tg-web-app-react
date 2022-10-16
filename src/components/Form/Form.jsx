@@ -17,12 +17,13 @@ const Form = () => {
         // }
         // tg.sendData(JSON.stringify(data));
         // tg.openLink(<Link to='product'/>)
-        <NavLink to='product'></NavLink>
+
 
     }, [country, street, subject])
 
     useEffect(() => {
-        tg.onEvent('mainButtonClicked', onSendData)
+        // tg.onEvent('mainButtonClicked', onSendData)
+        tg.onEvent('mainButtonClicked', <NavLink to='product'></NavLink>)
         return () => {
             tg.offEvent('mainButtonClicked', onSendData)
         }

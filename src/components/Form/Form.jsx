@@ -1,13 +1,15 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './Form.css';
 import {useTelegram} from "../../hooks/useTelegram";
-import {NavLink} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
     const [country, setCountry] = useState('');
     const [street, setStreet] = useState('');
     const [subject, setSubject] = useState('physical');
     const {tg} = useTelegram();
+
+    const navigate = useNavigate()
 
     const onSendData = useCallback(() => {
         // const data = {
@@ -16,12 +18,14 @@ const Form = () => {
         //     subject
         // }
         // tg.sendData(JSON.stringify(data));
-        <NavLink to='product'/>
+
+
 
     }, [country, street, subject])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
+        tg.onEvent('mainButtonClicked', ()=> navigate('/product'))
         return () => {
             tg.offEvent('mainButtonClicked', onSendData)
         }
@@ -74,6 +78,8 @@ const Form = () => {
                 <option value={'physical'}>Физ. лицо</option>
                 <option value={'legal'}>Юр. лицо</option>
             </select>
+
+                <button onClick={()=> navigate('/product') }>перейти</button>
         </div>
     );
 };

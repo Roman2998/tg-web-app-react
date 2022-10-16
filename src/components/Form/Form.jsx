@@ -19,13 +19,12 @@ const Form = () => {
         // }
         // tg.sendData(JSON.stringify(data));
 
-
+        navigate('/product')
 
     }, [country, street, subject])
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
-        tg.onEvent('mainButtonClicked', ()=> navigate('/product'))
         return () => {
             tg.offEvent('mainButtonClicked', onSendData)
         }
@@ -78,8 +77,6 @@ const Form = () => {
                 <option value={'physical'}>Физ. лицо</option>
                 <option value={'legal'}>Юр. лицо</option>
             </select>
-
-                <button onClick={()=> navigate('/product') }>перейти</button>
         </div>
     );
 };

@@ -23,7 +23,7 @@ const Form = () => {
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
         tg.onEvent('mainButtonClicked', () => {
-            <Redirect to='product'/>
+            return <Redirect to='product'/>
         })
 
         return () => {

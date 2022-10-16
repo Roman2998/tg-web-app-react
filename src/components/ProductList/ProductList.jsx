@@ -31,7 +31,7 @@ const ProductList = () => {
             totalPrice: getTotalPrice(addedItems),
             queryId,
         }
-        fetch('https://fea5-176-59-33-152.eu.ngrok.io/web-data', {
+        fetch('https://f5ee-176-59-33-152.eu.ngrok.io/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

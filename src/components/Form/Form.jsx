@@ -17,7 +17,7 @@ const Form = ({dataProductList}) => {
             customerPhoneNumber,
             customerCar
         }
-        fetch('http://31.172.134.205:80/web-data', {
+        fetch('https://b59f8337-99bc-4914-a5f4-743d1812ce28.selcdn.net/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

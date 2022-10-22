@@ -17,7 +17,7 @@ const Form = ({dataProductList}) => {
             customerPhoneNumber,
             customerCar
         }
-        fetch('https://8917828d313e09.lhr.life/web-data', {
+        fetch('http://31.172.134.205:8000/web-data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -8,3 +8,49 @@ body {
   background: var(--tg-theme-bg-color);
   color: var(--tg-theme-text-color);
 }
+
+.engineOil {
+  background: url('icons/engineOil.png') no-repeat;
+}
+.atf {
+  background: url('icons/atf.png') no-repeat;
+}
+.mtf {
+  background: url('icons/mtf.png') no-repeat;
+}
+.airFilter {
+  background: url('icons/airFilter.png') no-repeat;
+}
+.cabinFilter {
+  background: url('icons/cabinFilter.png') no-repeat;
+}
+.fuelFilter {
+  background: url('icons/fuelFilter.png') no-repeat;
+}
+.sparkPlug {
+  background: url('icons/sparkPlug.png') no-repeat;
+}
+.antifreeze {
+  background: url('icons/antifreeze.png') no-repeat;
+}
+.brakeFluid {
+  background: url('icons/brakeFluid.png') no-repeat;
+}
+.engine{
+  background: url('icons/engine.png') no-repeat;
+}
+.transmission{
+  background: url('icons/transmission.png') no-repeat;
+}
+.suspension {
+  background: url('icons/suspension.png') no-repeat;
+}
+.conditioner {
+  background: url('icons/conditioner.png') no-repeat;
+}
+.electrics {
+  background: url('icons/electrics.png') no-repeat;
+}
+.muffler {
+  background: url('icons/muffler.png') no-repeat;
+}

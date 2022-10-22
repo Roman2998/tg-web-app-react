@@ -1,24 +1,40 @@
 .product {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--tg-theme-button-color);
-    padding: 15px;
-    width: 170px;
+    width: 113px;
+    /*margin: 5px 5px 5px 5px;*/
+    align-items: center;
 }
-
-
 .img {
     width: 100%;
-    background: lightgray;
     height: 100px;
     margin: 0 auto;
-    background: var(--tg-theme-button-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.description {
-    font-size: 0.8em;
+    height: 66px;
+    text-align: center;
 }
-
-.add-btn {
-    width: 100%;
+.activeBtn {
+    background: #e64d44;
+}
+.price {
+    margin-bottom: 5px;
+}
+.price > span > b {
+    font-size: 20px;
+}
+.engineOil, .atf, .mtf ,.airFilter,
+.cabinFilter, .fuelFilter, .sparkPlug, .antifreeze,
+.brakeFluid, .engine, .transmission, .suspension,
+.conditioner, .electrics, .muffler {
+    background-size:100%;
+    height: 75px;
+    width: 75px;
 }
